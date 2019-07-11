@@ -1,5 +1,4 @@
 sudo ln -sf /home/box/web/etc/nginx.conf /etc/nginx/sites-enabled/test.conf
-sudo bash -c 'cat /home/box/web/etc/include.conf >> /etc/nginx/nginx.conf'
 sudo rm -rf /etc/nginx/sites-enabled/default
 sudo nginx -c /etc/nginx/sites-enabled/test.conf
 sudo ln -s /home/box/web/etc/gunicorn.conf.py   /etc/gunicorn.d/test
