@@ -21,5 +21,13 @@ cd
 cd web
 cd other
 sudo cp urls.py /home/box/web/ask/ask/
+cd ..
+cd ask
+cd ask
+sudo mkdir qa
+cd
+cd web
+cd other
+sudo cp views.py /home/box/web/ask/ask/qa/
 sudo ln -s /home/box/web/etc/gunicorn.conf.py   /etc/gunicorn.d/test
 sudo /etc/init.d/gunicorn restart
