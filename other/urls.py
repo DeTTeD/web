@@ -6,11 +6,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
-urlpatterns = patterns('',
-    url(r'^login/', include('qa.urls')),
-    url(r'^$', include('qa.urls')),
-    url(r'^ask/', include('qa.urls')),
-    url(r'^popular/', include('qa.urls')),
-    url(r'^new/', include('qa.urls')),
-    url(r'^question/<123>/', include('qa.urls')),
+urlpatterns = patterns('qa.views',
+    url(r'^login/.*$', 'test', name='login', include('qa.urls')),
+    url(r'^$', 'test', include('qa.urls')),
+    url(r'^ask/.*', 'test', name='ask', include('qa.urls')),
+    url(r'^popular/.*', 'test', name='popular', include('qa.urls')),
+    url(r'^new/', 'test', name='new', include('qa.urls')),
+    url(r'^question/(?P<id>[0-9]+)/$', 'test', name='question', include('qa.urls')),
 )
