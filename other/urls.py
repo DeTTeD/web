@@ -3,15 +3,14 @@ from django.urls import path
 from django.conf.urls import patterns, include, url
 from qa.views import test
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-]
+admin.autodiscover()
+
 
 urlpatterns = patterns('qa.views',
-    url(r'^login/.*$', 'test', name='login', include('qa.urls')),
-    url(r'^$', 'test', include('qa.urls')),
-    url(r'^ask/.*', 'test', name='ask', include('qa.urls')),
-    url(r'^popular/.*', 'test', name='popular', include('qa.urls')),
-    url(r'^new/', 'test', name='new', include('qa.urls')),
-    url(r'^question/(?P<id>[0-9]+)/$', 'test', name='question', include('qa.urls')),
+    url(r'^login/.*$',  'qa.views.test'),
+    url(r'^$',  'qa.views.test'),
+    url(r'^ask/.*',  'qa.views.test'),
+    url(r'^popular/.*',  'qa.views.test'),
+    url(r'^new/',  'qa.views.test'),
+    url(r'^question/(?P<id>[0-9]+)/$',  'qa.views.test'),
 )
