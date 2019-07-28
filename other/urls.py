@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import patterns, include, url
+from django.conf.urls import url
 from qa.views import test
 
 admin.autodiscover()
