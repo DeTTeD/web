@@ -9,3 +9,10 @@ cd ask
 sudo python manage.py startapp qa
 cd ..
 sudo bash -c 'cat other/views.py >> ask/qa/views.py'
+cd ask
+cd ask
+sudo rm -rf urls.py
+cd
+cd web
+cd other
+sudo bash -c 'cp urls.py home/web/ask/ask/'
