@@ -1,3 +1,8 @@
+sudo virtualenv -p python3 myvenv
+sudo source myvenv/bin/activate
+sudo pip install --upgrade pip
+sudo pip install django
+sudo pip install gunicorn
 sudo ln -sf /home/box/web/etc/nginx.conf /etc/nginx/sites-enabled/test.conf
 sudo rm -rf /etc/nginx/sites-enabled/default
 sudo nginx -c /etc/nginx/sites-enabled/test.conf
@@ -15,4 +20,4 @@ sudo rm -rf urls.py
 cd
 cd web
 cd other
-sudo bash -c 'cp urls.py home/box/web/ask/ask/'
+cp urls.py /home/box/web/ask/ask/
