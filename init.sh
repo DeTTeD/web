@@ -7,3 +7,4 @@ sudo /etc/init.d/mysql start
 sudo django-admin.py startproject ask
 cd ask
 sudo python manage.py startapp qa
+sudo bash -c 'cat /web/other/views.py >> /web/ask/qa/views.py'
