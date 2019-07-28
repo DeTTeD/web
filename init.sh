@@ -5,3 +5,5 @@ sudo ln -s /home/box/web/etc/gunicorn.conf.py   /etc/gunicorn.d/test
 sudo /etc/init.d/gunicorn restart
 sudo /etc/init.d/mysql start
 sudo django-admin.py startproject ask
+cd /web/ask/
+sudo python manage.py startapp qa
