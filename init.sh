@@ -15,4 +15,4 @@ sudo rm -rf urls.py
 cd
 cd web
 cd other
-sudo bash -c 'cp urls.py home/web/ask/ask/'
+sudo bash -c 'cp urls.py home/box/web/ask/ask/'
