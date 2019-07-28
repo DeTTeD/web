@@ -3,6 +3,7 @@ sudo source myvenv/bin/activate
 sudo pip install --upgrade pip
 sudo pip install django
 sudo pip install gunicorn
+sudo upgrade gunicorn
 sudo ln -sf /home/box/web/etc/nginx.conf /etc/nginx/sites-enabled/test.conf
 sudo rm -rf /etc/nginx/sites-enabled/default
 sudo nginx -c /etc/nginx/sites-enabled/test.conf
@@ -21,13 +22,9 @@ cd
 cd web
 cd other
 sudo cp urls.py /home/box/web/ask/ask/
-cd ..
-cd ask
-cd ask
-sudo mkdir qa
-cd
-cd web
-cd other
-sudo cp views.py /home/box/web/ask/ask/qa/
+
 sudo ln -s /home/box/web/etc/gunicorn.conf.py   /etc/gunicorn.d/test
 sudo /etc/init.d/gunicorn restart
+cd ..
+cd ask
+sudo gunicorn -c /home/box/web/etc/gunicorn.conf.py ask.wsgi:application
