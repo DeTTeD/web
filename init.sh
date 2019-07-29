@@ -17,14 +17,14 @@ cd ask
 sudo python3 manage.py startapp qa
 cd ..
 sudo bash -c 'cat other/views.py >> ask/qa/views.py'
-#cd ask
-#cd ask
-#sudo rm -rf urls.py
+cd ask
+cd ask
+sudo rm -rf urls.py
 cd
 cd web
 cd other
-#sudo cp urls.py /home/box/web/ask/ask/
-sudo cp urls.py /home/box/web/ask/qa/
+sudo cp urls.py /home/box/web/ask/ask/
+#sudo cp urls.py /home/box/web/ask/qa/
 
 sudo ln -s /home/box/web/etc/gunicorn.conf.py   /etc/gunicorn.d/test
 sudo /etc/init.d/gunicorn restart
