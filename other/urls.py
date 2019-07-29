@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.conf.urls import url, include
+from django.conf.urls import url, include, patterns
 from qa.views import test
 
 admin.autodiscover()
