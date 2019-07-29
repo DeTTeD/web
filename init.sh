@@ -29,4 +29,4 @@ sudo ln -s /home/box/web/etc/gunicorn.conf.py   /etc/gunicorn.d/test
 sudo /etc/init.d/gunicorn restart
 cd ..
 cd ask
-sudo gunicorn -c /home/box/web/etc/gunicorn.conf.py ask.wsgi:application
+#sudo gunicorn -c /home/box/web/etc/gunicorn.conf.py ask.wsgi:application
